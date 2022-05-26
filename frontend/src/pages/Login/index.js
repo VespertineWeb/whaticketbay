@@ -72,14 +72,17 @@ const Login = () => {
     e.preventDefault();
     handleLogin(user);
   };
-
+ const logo = require('../../assets/galeralogo-removebg-preview.png');
+  
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
+        {/*Avatar className={classes.avatar}>
           <LockOutlined />
-        </Avatar>
+        </Avatar>*/}
+        <img src= {logo} style={{width: "100%"}} alt="logo"/>
+        
         <Typography component="h1" variant="h5">
           {i18n.t("login.title")}
         </Typography>
@@ -134,7 +137,7 @@ const Login = () => {
           <Grid container>
             <Grid item>
               <Link
-                href="#"
+                href="#008b02"
                 variant="body2"
                 component={RouterLink}
                 to="/signup"
