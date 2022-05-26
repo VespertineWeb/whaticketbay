@@ -18,13 +18,13 @@ const messages = {
         },
       },
       login: {
-        title: "Login",
+        title: "Faça o seu login agora",
         form: {
-          email: "Email",
-          password: "Senha",
+          email: "Insira o e-mail",
+          password: "Coloque a sua senha",
         },
         buttons: {
-          submit: "Entrar",
+          submit: "Fazer login",
           register: "Não tem um conta? Cadastre-se!",
         },
       },
@@ -36,23 +36,23 @@ const messages = {
       dashboard: {
         charts: {
           perDay: {
-            title: "Tickets hoje: ",
+            title: "Tickets today: ",
           },
         },
         messages: {
           inAttendance: {
-            title: "Em Atendimento"
+            title: "Em serviço"
           },
           waiting: {
-            title: "Aguardando"
+            title: "Esperando"
           },
           closed: {
-            title: "Finalizado"
+            title: "Fechado"
           }
         }
       },
       connections: {
-        title: "Conexões",
+        title: "Conexões do WhatsApp",
         toasts: {
           deleted: "Conexão com o WhatsApp excluída com sucesso!",
         },
@@ -108,8 +108,7 @@ const messages = {
         form: {
           name: "Nome",
           default: "Padrão",
-          farewellMessage: "Mensagem de despedida",
-          isMultidevice: "Multidevice",
+          farewellMessage: "Mensagem de despedida"
         },
         buttons: {
           okAdd: "Adicionar",
@@ -209,7 +208,6 @@ const messages = {
           email: "Email",
           password: "Senha",
           profile: "Perfil",
-          whatsapp: "Conexão Padrão",
         },
         buttons: {
           okAdd: "Adicionar",
@@ -217,22 +215,6 @@ const messages = {
           cancel: "Cancelar",
         },
         success: "Usuário salvo com sucesso.",
-      },
-      tagModal: {
-        title: {
-          add: "Nova Tag",
-          edit: "Editar Tag",
-        },
-        form: {
-          name: "Nome",
-          color: "Cor"
-        },
-        buttons: {
-          okAdd: "Adicionar",
-          okEdit: "Salvar",
-          cancel: "Cancelar",
-        },
-        success: "Tag salvo com sucesso.",
       },
       chat: {
         noTicketMessage: "Selecione um ticket para começar a conversar.",
@@ -267,10 +249,6 @@ const messages = {
       transferTicketModal: {
         title: "Transferir Ticket",
         fieldLabel: "Digite para buscar usuários",
-        fieldQueueLabel: "Transferir para o setor",
-        fieldConnectionLabel: "Transferir para conexão",
-        fieldQueuePlaceholder: "Selecione um setor",
-        fieldConnectionPlaceholder: "Selecione uma conexão",
         noOptions: "Nenhum usuário encontrado com esse nome",
         buttons: {
           ok: "Transferir",
@@ -301,18 +279,23 @@ const messages = {
         listItems: {
           dashboard: "Dashboard",
           connections: "Conexões",
-          tickets: "Conversas",
+          tickets: "Atendimento",
           contacts: "Contatos",
           quickAnswers: "Respostas Rápidas",
-          queues: "Setores & Chatbot",
-          schedules: "Agendamentos",
-          tags: "Tags",
-          api: "API",
+          queues: "Setores",
           administration: "Administração",
           users: "Usuários",
-          docs: "Documentação",
-          tokens: "Tokens",
           settings: "Configurações",
+          ZDG: "Envio Automático",
+          ZDGMedia: "Envio de Mídia",
+          ZDGGroups: "Grupos",
+          Direct: "Direct IG",
+          SMS: "SMS",
+          VoiceCall: "Chamada Telefônica",
+          ZDGChatbot: "Chatbot",
+          ZDGAgendamento: "Agendadas",
+          ZDGHistorico: "Histórico"
+
         },
         appBar: {
           user: {
@@ -323,46 +306,6 @@ const messages = {
       },
       notifications: {
         noTickets: "Nenhuma notificação.",
-      },
-      schedules: {
-        title: "Agendamentos",
-        confirmationModal: {
-          deleteTitle:
-            "Você tem certeza que quer excluir este Agendamento?",
-          deleteMessage: "Esta ação não pode ser revertida.",
-        },
-        table: {
-          contact: "Contato",
-          body: "Mensagem",
-          sendAt: "Data de Agendamento",
-          sentAt: "Data de Envio",
-          status: "Status",
-          actions: "Ações",
-        },
-        buttons: {
-          add: "Novo Agendamento",
-        },
-        toasts: {
-          deleted: "Agendamento excluído com sucesso.",
-        }
-      },
-      scheduleModal: {
-        title: {
-          add: "Novo Agendamento",
-          edit: "Editar Agendamento",
-        },
-        form: {
-          body: "Mensagem",
-          contact: "Contato",
-          sendAt: "Data de Agendamento",
-          sentAt: "Data de Envio"
-        },
-        buttons: {
-          okAdd: "Adicionar",
-          okEdit: "Salvar",
-          cancel: "Cancelar",
-        },
-        success: "Agendamento salvo com sucesso.",
       },
       queues: {
         title: "Setores",
@@ -378,7 +321,7 @@ const messages = {
         confirmationModal: {
           deleteTitle: "Excluir",
           deleteMessage:
-            "Você tem certeza? Essa ação não pode ser revertida! Os tickets desse setor continuarão existindo, mas não terão mais nenhum setor atribuída.",
+            "Você tem certeza? Essa ação não pode ser revertida! Os tickets desse setor continuarão existindo, mas não terão mais nenhum setor atribuído.",
         },
       },
       queueSelect: {
@@ -410,7 +353,6 @@ const messages = {
           name: "Nome",
           email: "Email",
           profile: "Perfil",
-          whatsapp: "Conexão Padrão",
           actions: "Ações",
         },
         buttons: {
@@ -425,26 +367,6 @@ const messages = {
             "Todos os dados do usuário serão perdidos. Os tickets abertos deste usuário serão movidos para o setor.",
         },
       },
-      tags: {
-        title: "Tags",
-        confirmationModal: {
-          deleteTitle:
-            "Você tem certeza que quer excluir esta Tag?",
-          deleteMessage: "Esta ação não pode ser revertida.",
-        },
-        table: {
-          name: "Nome",
-          color: "Cor",
-          tickets: "Registros Tagdos",
-          actions: "Ações",
-        },
-        buttons: {
-          add: "Nova Tag",
-        },
-        toasts: {
-          deleted: "Tag excluído com sucesso.",
-        }
-      },
       settings: {
         success: "Configurações salvas com sucesso.",
         title: "Configurações",
@@ -454,37 +376,6 @@ const messages = {
             options: {
               enabled: "Ativado",
               disabled: "Desativado",
-            },
-          },
-          timeCreateNewTicket: {
-            name: "Mensagem de boas-vindas após",
-            note: "Selecione o tempo que será necessário para abrir um novo ticket, caso o cliente entre em contatos novamente",
-            options: {
-              "10": "10 Segundos",
-              "30": "30 Segundos",
-              "60": "1 minuto",
-              "300": "5 minutos",
-              "1800" : "30 minutos",
-              "3600" : "1 hora",
-              "7200" : "2 horas",
-              "21600" : "6 horas",
-              "43200" : "12 horas",
-              "86400" : "24 horas",
-              "172800" : "48 horas",
-            },
-          },  
-          call: {
-            name: "Aceitar chamadas",
-            options: {
-              enabled: "Ativado",
-              disabled: "Desativado",
-            },
-          },
-          CheckMsgIsGroup: {
-            name: "Ignorar Mensagens de Grupos",
-            options: {
-                enabled: "Ativado",
-                disabled: "Desativado",
             },
           },
         },
@@ -501,7 +392,7 @@ const messages = {
         },
       },
       messagesInput: {
-        placeholderOpen: "Digite uma mensagem ou tecle ''/'' para utilizar as respostas rápidas cadastrada",
+        placeholderOpen: "Digite uma mensagem",
         placeholderClosed:
           "Reabra ou aceite esse ticket para enviar uma mensagem.",
         signMessage: "Assinar",
@@ -541,7 +432,6 @@ const messages = {
         },
       },
       backendErrors: {
-        ERR_TAG_NAME_ALREADY_EXISTS: "Já existe uma tag com esse nome.",
         ERR_NO_OTHER_WHATSAPP: "Deve haver pelo menos um WhatsApp padrão.",
         ERR_NO_DEF_WAPP_FOUND:
           "Nenhum WhatsApp padrão encontrado. Verifique a página de conexões.",
@@ -575,7 +465,7 @@ const messages = {
         ERR_QUEUE_COLOR_ALREADY_EXISTS:
           "Esta cor já está em uso, escolha outra.",
         ERR_WAPP_GREETING_REQUIRED:
-          "A mensagem de saudação é obrigatório quando há mais de um setor.",
+          "A mensagem de saudação é obrigatório quando há mais de um Setor.",
       },
     },
   },
