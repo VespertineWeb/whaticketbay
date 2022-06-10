@@ -185,8 +185,8 @@ const messages = {
       },
       queueModal: {
         title: {
-          add: "Adicionar fila",
-          edit: "Editar fila",
+          add: "Adicionar Setor",
+          edit: "Editar Setor",
         },
         form: {
           name: "Nome",
@@ -243,7 +243,7 @@ const messages = {
         },
       },
       ticketsQueueSelect: {
-        placeholder: "Filas",
+        placeholder: "Setores",
       },
       tickets: {
         toasts: {
@@ -253,8 +253,8 @@ const messages = {
           message: "Mensagem de",
         },
         tabs: {
-          open: { title: "Inbox" },
-          closed: { title: "Resolvidos" },
+          open: { title: "Conversas" },
+          closed: { title: "Encerradas" },
           search: { title: "Busca" },
         },
         search: {
@@ -267,9 +267,9 @@ const messages = {
       transferTicketModal: {
         title: "Transferir Ticket",
         fieldLabel: "Digite para buscar usuários",
-        fieldQueueLabel: "Transferir para fila",
+        fieldQueueLabel: "Transferir para o Setor ",
         fieldConnectionLabel: "Transferir para conexão",
-        fieldQueuePlaceholder: "Selecione uma fila",
+        fieldQueuePlaceholder: "Selecione um Setor",
         fieldConnectionPlaceholder: "Selecione uma conexão",
         noOptions: "Nenhum usuário encontrado com esse nome",
         buttons: {
@@ -301,10 +301,10 @@ const messages = {
         listItems: {
           dashboard: "Dashboard",
           connections: "Conexões",
-          tickets: "Conversas",
+          tickets: "Atendimento",
           contacts: "Contatos",
           quickAnswers: "Respostas Rápidas",
-          queues: "Filas & Chatbot",
+          queues: "Setores & Chatbot",
           schedules: "Agendamentos",
           tags: "Tags",
           api: "API",
@@ -365,7 +365,7 @@ const messages = {
         success: "Agendamento salvo com sucesso.",
       },
       queues: {
-        title: "Filas",
+        title: "Setores",
         table: {
           name: "Nome",
           color: "Cor",
@@ -373,16 +373,16 @@ const messages = {
           actions: "Ações",
         },
         buttons: {
-          add: "Adicionar fila",
+          add: "Adicionar um setor",
         },
         confirmationModal: {
           deleteTitle: "Excluir",
           deleteMessage:
-            "Você tem certeza? Essa ação não pode ser revertida! Os tickets dessa fila continuarão existindo, mas não terão mais nenhuma fila atribuída.",
+            "Você tem certeza? Essa ação não pode ser revertida! Os tickets desse setor continuarão existindo, mas não terão mais nenhum setor atribuído.",
         },
       },
       queueSelect: {
-        inputLabel: "Filas",
+        inputLabel: "Setores",
       },
       quickAnswers: {
         title: "Respostas Rápidas",
@@ -422,7 +422,7 @@ const messages = {
         confirmationModal: {
           deleteTitle: "Excluir",
           deleteMessage:
-            "Todos os dados do usuário serão perdidos. Os tickets abertos deste usuário serão movidos para a fila.",
+            "Todos os dados do usuário serão perdidos. Os tickets abertos deste usuário serão movidos para um setor.",
         },
       },
       tags: {
@@ -575,7 +575,7 @@ const messages = {
         ERR_QUEUE_COLOR_ALREADY_EXISTS:
           "Esta cor já está em uso, escolha outra.",
         ERR_WAPP_GREETING_REQUIRED:
-          "A mensagem de saudação é obrigatório quando há mais de uma fila.",
+          "A mensagem de saudação é obrigatório quando há mais de um Setor.",
       },
     },
   },
