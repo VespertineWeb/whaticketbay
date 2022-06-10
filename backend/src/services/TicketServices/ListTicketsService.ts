@@ -171,27 +171,25 @@ const ListTicketsService = async ({
     };
   }
 
- // await setMessagesAsRead(ticket);
-  const limit = 20;
+ const limit = 40;
   const offset = limit * (+pageNumber - 1);
 
-  const { count, rows: messages } = await Message.findAndCountAll({
-    //where: { ticketId },
-    //where: {contactid : ticket.contactId},
+  const { count, rows: tickets } = await Ticket.findAndCountAll({
+    where: whereCondition,
+    include: includeCondition,
+    distinct: true,
     limit,
-    include: [
-      "contact",
-      {
-        model: Message,
-        as: "quotedMsg",
-        include: ["contact"]
-      },
-      {
-        model: Ticket,
-        where: {contactId: ticket.contactId  },
-        required: true
-      }
-    ],
     offset,
-    order: [["createdAt", "DESC"]]
+    order: [["updatedAt", "DESC"]]
   });
+
+  const hasMore = count > offset + tickets.length;
+
+  return {
+    tickets,
+    count,
+    hasMore
+  };
+};
+
+export default ListTicketsService;
