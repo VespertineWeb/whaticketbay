@@ -115,4 +115,4 @@ await UpdateTicketService({ticketId: contactAndTicket.id,ticketData: { status: "
 //return res.send();
 return res.send({ error: "SUCCESS" });
 };
-};
+
